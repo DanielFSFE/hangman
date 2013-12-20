@@ -131,7 +131,11 @@ for c in goal:
 		display.append("_")
 print("guess a word with ",howmany," chars")
 print(display)
-while (len(wrong)<12) or (not  "_" in display):
+while True:
+	if len(wrong)>11:
+		break
+	if not ("_" in display):
+		break
 	guess=input("please type a char: ")
 	if guess in goal:
 		correct.append(guess)
