@@ -115,8 +115,18 @@ YOU LOST!!!!!!!!!!
 
 pics=[p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]
 
-wortschatz=["reindeers","elves","santaclaus","presents","christmastree",
+print ("type ENTER if you want to use a random word else type your word and press ENTER")
+y=input(">>> ")
+if y=="":
+	words=["reindeers","elves","santaclaus","presents","christmastree",
 			"candles","christmas","church","decoration","christday"]
+else:
+	words=[y]
+
+print("\n"*40)
+print("now turn the PC to the other player")
+print()
+
 
 display=[]
 
@@ -124,7 +134,7 @@ wrong=[]
 
 correct=[]
 
-goal=random.choice(wortschatz)
+goal=random.choice(words)
 goal=list(goal)
 howmany=len(goal)
 for c in goal:
@@ -148,5 +158,4 @@ while True:
 		wrong.append(guess)
 	print(pics[len(wrong)])
 	print(display)
-print(goal)
 print("GAME OVER")
